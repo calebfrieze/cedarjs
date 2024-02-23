@@ -1,2 +1,3 @@
-# banana.js
-A VanillaJS text editor
+# banana.ts
+
+A VanillaTS text editor
