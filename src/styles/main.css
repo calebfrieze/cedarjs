@@ -1,0 +1,31 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", sans-serif;
+	background-color: #f8c537;
+	color: #333;
+}
+
+body {
+	padding: 14px;
+}
+
+.editor {
+	height: 100%;
+	border: 1px solid #f8c537;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 16px;
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+	background-color: #fff;
+	color: #333;
+}
+
+.editor-section {
+	margin-bottom: 20px;
+}
+
+.editor-section .editor {
+	margin-bottom: 16px;
+}

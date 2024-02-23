@@ -1,4 +1,24 @@
 ---
+import "../styles/main.css";
 ---
 
-<div>Welcome to BananaTS</div>
+<h1>Welcome to BananaTS</h1>
+<section class="editor-section">
+	<div id="description" class="editor">
+		BananaTS is a simple and easy to use WYSIWYG editor. It is written in
+		TypeScript and is designed to be easy to use and easy to integrate into your
+		project.
+	</div>
+	<div id="test-editor" class="editor"></div>
+</section>
+
+<script>
+	import banana from "../lib/banana.ts";
+	banana.init({
+		id: "description",
+	});
+	banana.init({
+		id: "test-editor",
+		defaultContent: "This is the banana editor",
+	});
+</script>
