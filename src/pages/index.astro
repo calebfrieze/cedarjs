@@ -2,23 +2,23 @@
 import "../styles/main.css";
 ---
 
-<h1>Welcome to BananaJS</h1>
+<h1>Welcome to CedarJS</h1>
 <section class="editor-section">
 	<div id="description" class="editor">
-		BananaTS is a simple and easy to use WYSIWYG editor. It is written in
-		TypeScript and is designed to be easy to use and easy to integrate into your
+		CedarJS is a simple and easy to use WYSIWYG editor. It is written in
+		JavaScript and is designed to be easy to use and easy to integrate into your
 		project.
 	</div>
 	<div id="test-editor" class="editor"></div>
 </section>
 
 <script>
-	import banana from "../lib/banana.js";
-	banana.init({
+	import cedar from "../lib/cedar.js";
+	cedar.init({
 		id: "description",
 	});
-	banana.init({
+	cedar.init({
 		id: "test-editor",
-		defaultContent: "This is the banana editor",
+		defaultContent: "This is the cedar editor",
 	});
 </script>

@@ -1,5 +1,5 @@
 /**
- * @typedef {object} BananaEditor
+ * @typedef {object} CedarEditor
  * @property {HTMLElement} element - The element the editor is initialized on
  * @property {function} setEditMode - Sets the edit mode of the editor
  * @property {function} setContent - Sets the content of the editor
@@ -7,7 +7,7 @@
  * @property {function} setCursorPosition - Sets the cursor position of the editor
  */
 /**
- * @typedef {object} BananaConfig
+ * @typedef {object} CedarConfig
  * @property {string} id - The id of the element to initialize the editor on
  * @property {string=} defaultContent - The default content to set in the editor
  */
@@ -15,8 +15,8 @@
 /**
  * @name init
  * @description Initializes the editor on the provided element
- * @param {BananaConfig} BananaConfig
- * @returns {BananaEditor}
+ * @param {CedarConfig} BananaConfig
+ * @returns {CedarEditor}
  */
 export const init = ({ id, defaultContent }) => {
 	if (!id) {
@@ -28,7 +28,7 @@ export const init = ({ id, defaultContent }) => {
 		throw new Error(`Could not find element with id ${id}`);
 	}
 
-	const bananaEditor = {
+	const cedarEditor = {
 		element: editor,
 		setEditMode(isEditable) {
 			this.element.contentEditable = isEditable ? "true" : "false";
@@ -56,20 +56,20 @@ export const init = ({ id, defaultContent }) => {
 	};
 
 	const cursorPos = defaultContent?.length || 0;
-	bananaEditor.setContent(defaultContent || "");
+	cedarEditor.setContent(defaultContent || "");
 
-	bananaEditor.element.addEventListener("click", () => {
-		bananaEditor.setEditMode(true);
-		bananaEditor.setCursorPosition(cursorPos);
+	cedarEditor.element.addEventListener("click", () => {
+		cedarEditor.setEditMode(true);
+		cedarEditor.setCursorPosition(cursorPos);
 	});
 
-	bananaEditor.element.addEventListener("blur", () => {
-		bananaEditor.setEditMode(false);
+	cedarEditor.element.addEventListener("blur", () => {
+		cedarEditor.setEditMode(false);
 	});
 
-	bananaEditor.element.addEventListener("focus", () => {
-		bananaEditor.setEditMode(true);
+	cedarEditor.element.addEventListener("focus", () => {
+		cedarEditor.setEditMode(true);
 	});
 
-	return bananaEditor;
+	return cedarEditor;
 };
